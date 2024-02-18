@@ -8,7 +8,7 @@ jobs:
     
       - name: Get branch names
         id: branch-name
-        uses: tj-actions/branch-names@v5.1
+        uses: tj-actions/branch-names@v7.0.7
     
       - name: Clone repo
         run: git clone -b ${{ steps.branch-name.outputs.current_branch }} --jobs 20 --recurse-submodules ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY} .
